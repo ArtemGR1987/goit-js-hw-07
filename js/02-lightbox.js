@@ -17,16 +17,7 @@ const galleryRef = document.querySelector(".gallery");
 const addGalleryMarkup = createGalleryMarkup(galleryItems);
 galleryRef.insertAdjacentHTML("afterbegin", addGalleryMarkup);
 
-galleryRef.addEventListener("click", onImgClick);
-
 const ligthbox = new SimpleLightbox(".gallery a", {
   captionsData: "alt",
   captionDelay: 250,
 });
-
-function onImgClick(event) {
-  event.preventDefault();
-  if (event.target.nodeName !== "IMG") {
-    return;
-  }
-}
